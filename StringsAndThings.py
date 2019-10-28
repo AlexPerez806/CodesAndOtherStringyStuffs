@@ -48,3 +48,34 @@ print(name[-4:8])
 
 for i in range(0, len(name)+1):
     print(name[0:i])
+
+# Searching
+
+if "y" not in name:
+   print("biv" in name)
+else:
+   print("y" not in name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Character functions
+
+print(chr(104))
+print(ord('&'))
+
+
