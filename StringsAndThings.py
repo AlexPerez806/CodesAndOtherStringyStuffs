@@ -65,3 +65,7 @@ from mapper import *
 print(letterToIndex('M'))
 
 print(indexToLetter(44))
+
+from crypto import *
+
+print(scramble2Encrypt("THE MEETING IS AT FIVE OCLOCK"))
