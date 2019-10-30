@@ -2,14 +2,15 @@
 
 # encryption function
 def scramble2Encrypt(plainText):
-    evenChars = " "
-    oddChars = " "
+    # stripSpaces(plainText)
+    evenChars = ""
+    oddChars = ""
     charCount = 0
     for ch in plainText:
         if charCount % 2 == 0:
             evenChars = evenChars + ch
         else:
-            oddChars = evenChars + ch
+            oddChars = oddChars + ch
         charCount = charCount + 1
     cipherText = oddChars + evenChars
     return cipherText
@@ -17,9 +18,9 @@ def scramble2Encrypt(plainText):
 
 def scramble2Decrypt(cipherText):
     halfLength = len(cipherText) // 2
-    evenChars = cipherText[halfLength]  # halfLength to the end
-    oddChars = cipherText[:halfLength]  # 0 to halfLength - 1
-    plainText
+    evenChars = cipherText[halfLength:]  # halflength to the end
+    oddChars = cipherText[:halfLength]   # 0 to halflength - 1
+    plainText = ""
 
     for i in range(halfLength):
         plainText = plainText + evenChars[i]
@@ -29,3 +30,13 @@ def scramble2Decrypt(cipherText):
         plainText = plainText + evenChars[-1]
 
     return plainText
+
+def encryptMessage():
+    msg = input("Enter your message to encrypt: ")
+    cipherText = scramble2Encrypt(msg)
+    print("The encrypted message is:", cipherText)
+
+# write a stripSpaces(text) function here
+
+# write a caesarEncrypt(plainText, shift)
+# write a caesarDecrypt(cipherText, shift)

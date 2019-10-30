@@ -1,7 +1,7 @@
 # Strings
 
 # Concatenation
-#     2 or more strings and put them together
+#    2 or more strings and put them together
 
 firstName = "Wilma"
 lastName = "Flintstone"
@@ -14,7 +14,6 @@ lastFirst = lastName + ", " + firstName
 print(lastFirst)
 
 # Repetition
-
 #   repetition operator: *
 
 print("Hip "*2 + "Hooray!")
@@ -24,6 +23,7 @@ def rowYourBoat():
     print("Gently down the stream")
     print("Merrily, "*4)
     print("Life is but a dream")
+
 
 rowYourBoat()
 
@@ -51,10 +51,27 @@ for i in range(0, len(name)+1):
 
 # Searching
 
+print("biv" in name)
+
 if "y" not in name:
-   print("biv" in name)
+    print("y is not in name")
 else:
-   print("y" not in name)
+    print("y is in name")
+
+    # String Methods to investigate:
+    # Method        Use Example         Explanation
+    # center        aStr.center(w)
+    # ljust         aStr.ljust(w)
+    # rjust         aStr.rjust(w)
+    # upper         aStr.upper()
+    # lower         aStr.lower()
+    # index         aStr.index(item)
+    # rindex        aStr.rindex(item)
+    # find          aStr.find(item)
+    # rfind         aStr.rfind(item)
+    # replace       aStr.replace(old, new)
+
+    # Be sure to include multiple examples of all of them in use
 
 # Character functions
 
@@ -64,8 +81,20 @@ print(ord('&'))
 from mapper import *
 print(letterToIndex('M'))
 
-print(indexToLetter(44))
+print(indexToLetter(22))
+
 
 from crypto import *
 
 print(scramble2Encrypt("THE MEETING IS AT FIVE OCLOCK"))
+print(scramble2Encrypt("H ETN SA IEOLCTEMEIGI TFV COK"))
+print(scramble2Decrypt(scramble2Decrypt(" T AIOCEEG F OHENS ELTMIITVCK")))
+
+
+
+
+from crypto import *
+
+print(scramble2Encrypt("SCHOOL LUNCH IS TRASH"))
+print(scramble2Encrypt("T AIOCEEG F OHENS ELTMIITVCK"))
+
